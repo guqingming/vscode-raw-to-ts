@@ -1,0 +1,74 @@
+{
+  "name": "raw-to-ts",
+  "displayName": "RAW to TS",
+  "description": "Convert JSON object to typescript interfaces",
+  "version": "1.0.0",
+  "publisher": "mycssweb",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "keywords": [
+    "types",
+    "util",
+    "typescript",
+    "json"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:rawToTs.fromSelection",
+    "onCommand:rawToTs.fromClipboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guqingming/vscode-raw-to-ts.git"
+  },
+  "author": "https://github.com/guqingming",
+  "main": "./out/index.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rawToTs.fromSelection",
+        "title": "Selection",
+        "category": "Cat Coding"
+      },
+      {
+        "command": "rawToTs.fromClipboard",
+        "title": "Do some refactoring",
+        "category": "Cat Coding"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "rawToTs.fromClipboard",
+        "key": "shift+ctrl+alt+V"
+      },
+      {
+        "command": "rawToTs.fromSelection",
+        "key": "shift+ctrl+alt+S"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "tslint -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "dependencies": {
+    "copy-paste": "^1.3.0",
+    "raw-to-ts": "^0.1.1",
+    "universal-analytics": "^0.4.20",
+    "uuid-by-string": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/copy-paste": "^1.1.30",
+    "@types/node": "^10.5.2",
+    "@types/universal-analytics": "0.3.27",
+    "@types/vscode": "^1.38.0",
+    "tslint": "^5.16.0",
+    "typescript": "^4.4.3"
+  }
+}

@@ -1,0 +1,11 @@
+import { ViewColumn } from "vscode";
+import { Client } from "universal-analytics";
+export declare function getUserId(): string;
+export declare function getClipboardText(): Promise<string>;
+export declare function handleError(error: Error): void;
+export declare function parseJson(json: string): Promise<object>;
+export declare const logEvent: (visitor: Client, eventAction: string) => (jsonString: string) => string;
+export declare function getViewColumn(): ViewColumn;
+export declare function pasteToMarker(content: string): Thenable<boolean>;
+export declare function getSelectedText(): Promise<string>;
+export declare const validateLength: (text: any) => Promise<any>;
