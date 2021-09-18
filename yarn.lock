@@ -308,10 +308,10 @@ pluralize@^3.1.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-3.1.0.tgz#84213d0a12356069daa84060c559242633161368"
   integrity sha1-hCE9ChI1YGnaqEBgxVkkJjMWE2g=
 
-raw-to-ts@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/raw-to-ts/-/raw-to-ts-0.1.1.tgz#58ad110d66562ee8fca6b07df6849b07e40ec032"
-  integrity sha512-FZFMUnCzouO6iUMwAECn+1arzHxzVot+uHfUbpPCAXO373IRW3iOR4VSJ52gnmNE7srmd7NaNwaricMdfcyNEg==
+raw-to-ts@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/raw-to-ts/-/raw-to-ts-0.1.2.tgz#82b2534427b02ae96a29eaec6c024ca209a86d45"
+  integrity sha512-Ox7J58PsnlDg/JW5pu8ILpqQyQICAQl8vfHDX12MkNYjKtt1jqpIepkXBxiIfCPYUp61NOPHKl0i54WQXrStMQ==
   dependencies:
     es7-shim "^6.0.0"
     hash.js "^1.0.3"
