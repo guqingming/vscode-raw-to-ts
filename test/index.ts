@@ -1,44 +1,36 @@
 interface Request {
-  /** undefined **/
+  /** 200 成功  -200失败 **/
   code: number;
+  /** 返回成功 **/
+  message: string;
   /** undefined **/
   data: Data;
-  /** undefined **/
-  message: string;
 }
 
 interface Data {
-  /** 机场巴士客运量及运行车次日报表详情--数据 **/
-  airportBusReports: AirportBusReports;
-  /** 当日日客流量合计 **/
-  flowCount: number;
-  /** 去年--日客流量合计 **/
-  lastFlowCount: number;
-  /** 去年--日客运行车次合计 **/
-  lastTrainCount: number;
-  /** 统计日期 **/
-  statisticalDate: string;
-  /** 当日客运行车次合计 **/
-  trainCount: number;
+  /** 注释 **/
+  complianceOnlineCars: ComplianceOnlineCars;
+  /** 注释 **/
+  inCount: number;
+  /** 注释 **/
+  outCount: number;
+  /** 注释 **/
+  statisticsTime: string;
+  /** 注释 **/
+  createTime: string;
 }
 
-interface AirportBusReports {
-  /** 机场ID **/
-  airportId: number;
-  /** 机场名称 **/
-  airportName: string;
-  /** 日流量 **/
-  dailyFlow: number;
-  /** 日车次 **/
-  dailyTrain: number;
-  /** undefined **/
-  id: number;
-  /** 去年日流量 **/
-  lastDailyFlow: number;
-  /** 去年日车次 **/
-  lastDailyTrain: number;
-  /** 填报人 **/
-  statisticalName: string;
-  /** 填报时间 **/
-  statisticalTime: string;
+interface ComplianceOnlineCars {
+  /** 站场名称 **/
+  statName: string;
+  /** 日运行车次（车次） **/
+  dailyService: number;
+  /** 日客运量（人次） **/
+  passengers: number;
+  /** 保点车次（车次） **/
+  keepOnlineCar: number;
+  /** 保点客运量（人次） **/
+  keepPassengers: number;
+  /** 统计时间 **/
+  statisticsTime: string;
 }
