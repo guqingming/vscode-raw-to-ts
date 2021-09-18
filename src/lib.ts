@@ -1,17 +1,6 @@
 import { ViewColumn, window } from "vscode";
-import * as os from "os";
 import * as copyPaste from "copy-paste";
 import { Client } from "universal-analytics";
-import * as UuidByString from "uuid-by-string";
-
-export function getUserId(): string {
-  const hostname = os.hostname();
-  const { username } = os.userInfo();
-  const platform = os.platform();
-
-  const str = [hostname, username, platform].join("--");
-  return UuidByString(str);
-}
 
 export function getClipboardText() {
   try {
